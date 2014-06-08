@@ -1,0 +1,35 @@
+%Cory Welch
+%University of Waterloo
+%Department of Systmes Design Engineering
+%
+%Reverse the letters in the words
+
+str = 'abc def ghij';
+
+index = find(str == ' ');
+
+numWords = length(index);
+strLen = length(str);
+
+newString = [];
+
+for x = 1:strLen  
+    i = find(index == x);
+    if x == index(1)
+       for y = index(1)-1:-1:1
+            newString = [newString, str(y)];
+       end
+    end
+    if i
+        if i == length(index)
+            nextSpace = strLen;    
+        else
+            nextSpace = index(i+1);
+        end
+        for y = nextSpace:-1:x;          
+            newString = [newString, str(y)];
+        end
+    end
+end
+
+display(newString);
