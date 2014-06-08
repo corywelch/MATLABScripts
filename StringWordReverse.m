@@ -24,9 +24,6 @@ for x = strLen:-1:1
         for y = x:nextSpace;          
             newString = [newString, str(y)];
         end
-        space = ' ';
-        newString = [newString, space];
-        
     end
     if x == 1
        for y = x:index(1)
