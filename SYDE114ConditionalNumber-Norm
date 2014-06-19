@@ -1,0 +1,23 @@
+A = [1,2;3,4];
+
+Ai = inv(A);
+% Ai = A inverse
+
+N = norm(A,1);
+% N is the 1st norm of A
+Ni = norm(Ai,1);
+% Ni is the first norm of A inverse
+kA = cond(A,1);
+% S is how close to singular matrix A is
+
+fprintf('Matrix A');
+display(A);
+fprintf('Inverse of A');
+display(Ai);
+
+fprintf('1st Norm of A');
+display(N);
+fprintf('1st Norm of A inverse');
+display(Ni);
+fprintf('k(A)/Conditional Number of A or how to singular A is');
+display(kA);
