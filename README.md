@@ -8,3 +8,8 @@ Matrix inverse
 Eigenvalues Eigenvectors
 LU Factorization Permutation
 How close to singular it is
+
+SYDE 114 Conditional Number and Norm File
+Matrix Inverse
+Norms of Matrix and Matrix Inverse
+Conditional Number of Matrix
