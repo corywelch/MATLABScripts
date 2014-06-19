@@ -1,5 +1,5 @@
-A = [1,1,1;1,2,3;1,4,9];
-b = [2;-2;2];
+A = [1,2;3,4];
+b = [2;-2];
 I = [1,0,0;0,1,0;0,0,1];
 % Where A is the Main Matrix
 % Where b is the answer of Ax = b
@@ -47,5 +47,6 @@ fprintf('1st Norm of A');
 display(N);
 fprintf('1st Norm of A inverse');
 display(Ni);
-fprintf('k(A) or how to singular A is');
+fprintf('k(A)/Conditional Number of A or how to singular A is');
 display(kA);
+
