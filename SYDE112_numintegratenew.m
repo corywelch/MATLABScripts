@@ -24,10 +24,10 @@ function sum = numintegratenew(x_low,x_hi,numint,typeint,fx)
 
 length = (x_hi - x_low)/numint;
 x_value = x_low:length:x_hi;
-f_value = f(x_value);
+f_value = fx;
 
 figure(1); clf;
-x = x_low:length/100:x_hi;
+x = x_low:length:x_hi;
 
 hold on
 sum = 0;
@@ -62,7 +62,7 @@ switch typeint
     case 'midpoint'
         title('Numerical Integration Using Midpoint Rule')
         %Find out what value of f is at the midpoint of each interval
-        f_mid = f(x_value + length/2);
+        f_mid = fx;
         for i = 1:numint
             fill([x_value(i) x_value(i+1) x_value(i+1) x_value(i) x_value(i)],[0 0 f_mid(i) f_mid(i) 0],'r','linewidth',1)
             %Sum using Midpoint Rule
