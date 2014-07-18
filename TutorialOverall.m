@@ -177,39 +177,4 @@ while true
     end  
 end
 
-%Create 100 linearly space elements from 0 -> 4*pi
-x = linspace(0,4*pi,100);
-%Get our matrix of y1 values by inserting x-values into a function
-y1 = 60*sin(x);
-%Get our matrix of y2 values by inserting x-values into a function
-y2 = 70*cos(x);
-%Get our matrix of y3 values by inserting x-values into a function
-y3 = tan(x);
-%Create first subplot(rows,columns,position)
-subplot(2,2,1)
-%Plot in the subplot, this will attach itself to the previously mentioned
-%subplot! plot(xvals, yvals, prettyparams)
-plot(x,y1,'--r')
-subplot(2,2,2)
-plot(x,y2,':g')
-subplot(2,2,3)
-plot(x,y3)
-
-%Lets create a 3d plot :p
-
-%Create a x, y grid where each axis ranges from -8 -> 8 in 0.5
-%increments
-[x,y] = meshgrid(-8:0.5:8)
-
-%Define our radius matrix (Notice the dot operator....!)
-r = sqrt(x.^2 + y.^2);
-
-%We need a z axis to plot a 3D graph, get it from r!
-z = sin(r)./r;
-
-%plat stuff
-subplot(2,2,4)
-mesh(z)
-
-
 fprintf('\nAHAAHHHHHHHH');
