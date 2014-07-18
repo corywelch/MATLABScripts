@@ -57,9 +57,18 @@ subplot(2,2,3)
 plot(x,y3)
 
 %Lets create a 3d plot :p
+
+%Create a x, y grid where each axis ranges from -8 -> 8 in 0.5
+%increments
 [x,y] = meshgrid(-8:0.5:8)
+
+%Define our radius matrix (Notice the dot operator....!)
 r = sqrt(x.^2 + y.^2);
+
+%We need a z axis to plot a 3D graph, get it from r!
 z = sin(r)./r;
+
+%plat stuff
 subplot(2,2,4)
 mesh(z)
 
